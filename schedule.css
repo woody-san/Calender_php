@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+/*全体*/
+body {
+    background-image: url(image/pink_flower2.jpg);
+    background-size: cover;
+    
+}
+.wrapper{
+    max-width: 80%;
+    margin: 0 auto;
+    color: #666;
+}
+#header {
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+
+}
+h1 {
+    font-size: 3rem;
+    font-family: 'Arima', cursive;
+    color:#800000;
+    position: relative;
+}
+h2 {
+    font-size: 2rem;
+    font-family: 'Arima', cursive;
+    color:#800000;
+    position: relative;
+}
+p {
+    font-size: 2rem;
+    font-family: 'Arima', cursive;
+    color:#800000;
+}
+.btn {
+    cursor: pointer;
+    background: #6495ed;
+    color: #fff;
+    border: 1px solid #6495ed;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+.btn:hover {
+    background-color: #87cefa;
+    border-color: #87cefa;
+  }
+
+
+/*カレンダー*/
+#calendar {
+    text-align: center;
+    width: 100%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+th {
+    color: #000;
+}
+td {
+    outline: #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    margin-left: 3px;
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+}
+th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #f6f0cc;
+}
+td:hover{
+    color: #fff;
+}
+
+/*自分で入れた予定*/
+td.self {
+    outline: #ddd;
+    background-color: #f6f6cc;
+    color: #800000;
+    font-size: 2rem;
+    width: 600px;
+}
+td.notself{
+    outline: #ddd;
+    background-color: #eaf6fd;
+    color: #800000;
+    font-size: 2rem;
+    width: 600px;
+}
+
+/*ボタン*/
+#next-prev-button {
+    position: relative;
+}
+#next-prev-button button{
+    cursor: pointer;
+    background: #B78D4A;
+    color: #fff;
+    border: 1px solid #B78D4A;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#next-prev-button button:hover{
+    background-color: #D4BB92;
+    border-color: #D4BB92;
+}
+#prev {
+    float: left;
+}
+#next {
+    float: right;
+}
+
+#schedule_entry {
+    text-align:center;
+}
+#schedule_entry button{
+    cursor: pointer;
+    background: #6495ed;
+    color: #fff;
+    border: 1px solid #6495ed;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#schedule_entry button:hover{
+    background-color: #87cefa;
+    border-color: #87cefa;
+}
+#schedule {
+    text-align: center;
+}
+
+#logout {
+    text-align:center;
+}
+#logout button{
+    cursor: pointer;
+    background: #6495ed;
+    color: #fff;
+    border: 1px solid #6495ed;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#logout button:hover{
+    background-color: #87cefa;
+    border-color: #87cefa;
+}
+#logout_link {
+    text-align: center;
+}
+
+.radius-percent-10 {
+    border-radius: 10%;
+    background-color: #eaa4ac;
+    padding       : 12px 12px;
+    font-size: 23px;
+    color: white;
+    border-color: #eaa4ac;
+}
+.radius-percent-10:hover {
+    background-color: #f7c6bd;
+    padding       : 12px 12px;
+    font-size: 23px;
+    color: white;
+    border-color: #f7c6bd;
+  }

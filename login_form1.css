@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/*全体*/
+body {
+    background-image: url(image/pink_flower2.jpg);
+    background-size: cover;
+    
+}
+.wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: center;
+}
+h1 {
+    font-size: 5rem;
+    font-family: 'Arima', cursive;
+    color:#800000;
+    position: relative;
+}
+p {
+    font-size: 2rem;
+    font-family: 'Arima', cursive;
+    color:#800000;
+}
+
+#header {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    /*margin: 1rem 0 0;*/
+    margin: 0 auto;
+}
+
+.txt{
+    display: inline-block;
+    /*コレ*/width: 20em;
+    /*コレ*/max-width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+.input_form{
+    font-family: 'Arima', cursive;
+    color:#800000;
+}
+  
+input[type="text"] , input[type="password"] {
+    width: 20em;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  
+  input[type="text"]:focus,  input[type="password"]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+  }
+  
+  .inputWithIcon input[type="text"], .inputWithIcon input[type="password"] {
+    padding-left: 40px;
+  }
+  
+  .inputWithIcon {
+    position: relative;
+  }
+  
+  .inputWithIcon i {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
+  
+  .inputWithIcon input[type="text"]:focus + i,  .inputWithIcon input[type="password"]:focus + i {
+    color: dodgerBlue;
+  }
+  
+  .inputWithIcon.inputIconBg i {
+    background-color: #aaa;
+    color: #fff;
+    padding: 9px 4px;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .inputWithIcon.inputIconBg input[type="text"]:focus + i,  .inputWithIcon.inputIconBg input[type="password"]:focus + i {
+    color: #fff;
+    background-color: dodgerBlue;
+  }
+
+.radius-percent-10 {
+    border-radius: 10%;
+    background-color: #eaa4ac;
+    padding       : 12px 12px;
+    font-size: 23px;
+    color: white;
+    border-color: #eaa4ac;
+}
+.radius-percent-10:hover {
+    background-color: #f7c6bd;
+    padding       : 12px 12px;
+    font-size: 23px;
+    color: white;
+    border-color: #f7c6bd;
+  }
