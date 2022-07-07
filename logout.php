@@ -7,7 +7,7 @@ session_destroy();//セッションを破壊
 <html lang="'ja">
     <head>
         <meta charset="UTF-8">
-        <title>Calender_Registration</title>
+        <title>Calendar_Registration</title>
         <meta name="description" content="Schedule">
         <link rel="stylesheet" href="signup.css">
 

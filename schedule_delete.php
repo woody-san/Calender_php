@@ -72,7 +72,7 @@ if(isset($_POST['delete'])){
 <html lang="'ja">
     <head>
         <meta charset="UTF-8">
-        <title>Calender_Registration</title>
+        <title>Calendar_Registration</title>
         <meta name="description" content="Schedule">
         <link rel="stylesheet" href="schedule.css">
 
@@ -112,7 +112,7 @@ if(isset($_POST['delete'])){
             }
             echo '<input type="hidden" name="day" value="'.$day.'">';
             echo '</form>';
-            echo '<p><a href="calender.php" style="color:#20b2aa;">Calender</a></p>';
+            echo '<p><a href="calender.php" style="color:#20b2aa;">Calendar</a></p>';
 
 
             ?>

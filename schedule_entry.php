@@ -14,7 +14,7 @@
 <html lang="'ja">
     <head>
         <meta charset="UTF-8">
-        <title>Calender_Login</title>
+        <title>Calendar_Login</title>
         <meta name="description" content="カレンダーアプリ">
         <link rel="stylesheet" href="schedule_entry2.css">
 
@@ -43,7 +43,7 @@
         </br>
 
         <p><input class="radius-percent-10" type="submit" value="Submit"></p>
-        <p><a href="calender.php" style="color:#20b2aa;">Calender</a></p>
+        <p><a href="calender.php" style="color:#20b2aa;">Calendar</a></p>
 
     </form>
     </div>

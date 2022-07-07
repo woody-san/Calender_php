@@ -14,7 +14,7 @@
 <html lang="'ja">
     <head>
         <meta charset="UTF-8">
-        <title>Calender_Registration</title>
+        <title>Calendar_Registration</title>
         <meta name="description" content="カレンダー">
         <link rel="stylesheet" href="calender4.css">
 
@@ -47,17 +47,14 @@
 
         ?>
 
-        <script>
-            //var param = JSON.parse('<?php echo $param_json; ?>'); //JSONデコード
-            var result = JSON.parse('<?php echo $result; ?>'); //JSONデコード
-            //console.log(param);
-            const dayResult = result.map(schedule => {
-            return schedule[“day”];
-            });
-            console.log(dayResult);
-        </script>
+
         <script type="text/javascript">
 
+            var result = JSON.parse('<?php echo $result; ?>'); //JSONデコード
+            const dayResult = result.map(schedule => {
+            return schedule['day'];
+            });
+            console.log(dayResult);
 
             const week = ["日", "月", "火", "水", "木", "金", "土"];
             const today = new Date();
@@ -97,6 +94,7 @@
                 document.querySelector('#header').innerHTML = year + "年 " + (month + 1) + "月";
 
                 var calendar = createProcess(year, month);
+                console.log(calendar);
                 document.querySelector('#calendar').innerHTML = calendar;
             }
 
@@ -136,13 +134,36 @@
                                 //calendar += "<td class='today'>"  + count + "</td>";
                                 month_today = (month+1).toString().padStart(2, '0');
                                 day_today = (count).toString().padStart(2, '0');
-                                calendar += `<td class="today" data-date="${year}-${month_today}-${day_today}">${count}</td>`
+
+                                let firstDayIndex = dayResult.indexOf(year+"-"+month_today+"-"+day_today);
+                                let lastDayIndex = dayResult.lastIndexOf(year+"-"+month_today+"-"+day_today);
+                                if (firstDayIndex != -1) {
+                                    let schedule_cnt_per_day = lastDayIndex - firstDayIndex +1;
+                                    console.log(schedule_cnt_per_day);
+                                    console.log(day_today);
+                                    calendar += `<td class="schedule_day" data-date="${year}-${month_today}-${day_today}">${count}<br><div align="center" style="font-size: 2rem;color: #800000">${schedule_cnt_per_day}</div></td>`
+                                }else{
+                                    calendar += `<td class="not_schedule_day" data-date="${year}-${month_today}-${day_today}">${count}</td>`
+                                }
+                                
+                            
                             } else {
                                 //calendar += "<td class='nottoday'>" + count + "</td>";
                                 //calendar += `<td class="nottoday" width="50" data-date=${year}-${str_pad(month+1, 2, '0')}-${str_pad(count, 2, '0')}">${count}</td>`
                                 month_today = (month+1).toString().padStart(2, '0');
                                 day_today = (count).toString().padStart(2, '0');
-                                calendar += `<td class="nottoday" data-date="${year}-${month_today}-${day_today}">${count}</td>`
+
+                                let firstDayIndex = dayResult.indexOf(year+"-"+month_today+"-"+day_today);
+                                let lastDayIndex = dayResult.lastIndexOf(year+"-"+month_today+"-"+day_today);
+                                if (firstDayIndex != -1) {
+                                    let schedule_cnt_per_day = lastDayIndex - firstDayIndex +1;
+                                    console.log(schedule_cnt_per_day);
+                                    console.log(day_today);
+                                    calendar += `<td class="schedule_day" data-date="${year}-${month_today}-${day_today}">${count}<br><div align="center" style="font-size: 2rem;color: #800000">${schedule_cnt_per_day}</div></td>`
+                                }else{
+                                    calendar += `<td class="not_schedule_day" data-date="${year}-${month_today}-${day_today}">${count}</td>`
+                                }
+                                
                             }
                         }
                     }
@@ -172,10 +193,10 @@
             }
 
             document.addEventListener("click", function(e) {
-                if(e.target.classList.contains("today")) {
+                if(e.target.classList.contains("schedule_day")) {
                     //alert('クリックした日付は' + e.target.dataset.date + 'です')
                     postForm(e.target.dataset.date)
-                } else if(e.target.classList.contains("nottoday")){
+                } else if(e.target.classList.contains("not_schedule_day")){
                     //alert('クリックした日付は' + e.target.dataset.date + 'です')
                     postForm(e.target.dataset.date)
                 }

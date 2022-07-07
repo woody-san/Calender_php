@@ -9,7 +9,7 @@ $password = $_POST['password'];
 <html lang="'ja">
     <head>
         <meta charset="UTF-8">
-        <title>Calender_Registration</title>
+        <title>Calendar_Registration</title>
         <meta name="description" content="Schedule">
         <link rel="stylesheet" href="signup.css">
 
@@ -45,7 +45,7 @@ $password = $_POST['password'];
             //DBのユーザー情報をセッションに保存
             $_SESSION['email'] = $email;
             $msg = '<h1>Logged in.</h1>';
-            $link = '<p><a href="calender.php" style="color:#20b2aa;">Calender</a></p>';
+            $link = '<p><a href="calender.php" style="color:#20b2aa;">Calendar</a></p>';
             
         }
         echo '<h1>'.$msg.'</h1>';

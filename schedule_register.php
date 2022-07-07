@@ -37,7 +37,7 @@ echo '<h1>'.$link.'</h1>';
 <html lang="'ja">
     <head>
         <meta charset="UTF-8">
-        <title>Calender_Registration</title>
+        <title>Calendar_Registration</title>
         <meta name="description" content="Schedule">
         <link rel="stylesheet" href="schedule_entry2.css">
 
@@ -48,10 +48,9 @@ echo '<h1>'.$link.'</h1>';
     <body>
         <div class="wrapper">
             <?php
-            echo gettype($day);
             $data = array('title'=>$title,'day'=>$day,'user_email'=>$user_email);
             $data_json = json_encode($data);
-            echo $data_json;
+
             
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
@@ -61,15 +60,12 @@ echo '<h1>'.$link.'</h1>';
             curl_setopt($ch, CURLOPT_URL, 'http:/localhost:8090/register_schedules');
             $result=curl_exec($ch);
             $res_json = json_decode($result , true );
-            echo $res_json['day'];
-            echo gettype($res_json);
-            echo 'RETURN:'.$result.'/n';
             curl_close($ch);
 
             $msg = 'Schedule has been registered.';
             ?>
             <h1><?php echo $msg; ?></h1><!--メッセージの出力-->
-            <p><a href="calender.php" style="color:#20b2aa;">Calender</a></p>
+            <p><a href="calender.php" style="color:#20b2aa;">Calendar</a></p>
 
             
         </div>

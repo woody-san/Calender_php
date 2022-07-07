@@ -2,7 +2,7 @@
 <html lang="'ja">
     <head>
         <meta charset="UTF-8">
-        <title>Calender_Login</title>
+        <title>Calendar_Login</title>
         <meta name="description" content="カレンダーアプリ">
         <link rel="stylesheet" href="login_form3.css">
 
@@ -13,7 +13,7 @@
 
     <body>
     <div class="wrapper">
-        <h1>Calender</h1>
+        <h1>Calendar</h1>
         <form action="login.php" method="post">
         <div class="inputWithIcon">
             <!--<label class="input_form">ユーザID：<label>-->

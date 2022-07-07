@@ -2,7 +2,7 @@
 <html lang="'ja">
     <head>
         <meta charset="UTF-8">
-        <title>Calender_Login</title>
+        <title>Calendar_Login</title>
         <meta name="description" content="カレンダーアプリ">
         <link rel="stylesheet" href="signup.css">
 

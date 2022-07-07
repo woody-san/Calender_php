@@ -70,7 +70,7 @@ td {
     text-align: left;
     vertical-align: top;
     margin-left: 3px;
-    height: 80px;
+    height: 100px;
     background-color: white;
 }
 th {
@@ -101,12 +101,12 @@ td.disabled:hover{
     background-color: #fff;
     color: #ccc;
 }
-/*本日*/
-td.today {
+/*予定がある日*/
+td.schedule_day {
     background-color: #ffc7af;
     color: #fff;
 }
-td.today:hover{
+td.schedule_day:hover{
     background-color: #ffa9a2;
     color: #fff;
 }
