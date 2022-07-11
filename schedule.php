@@ -3,8 +3,7 @@
     $user_email = $_SESSION['email'];
     if (isset($_SESSION['email'])) {//ログインしているとき
         $msg = 'Hello, ' . htmlspecialchars($user_email, \ENT_QUOTES, 'UTF-8') .  ' &emsp;<a href="logout.php" class="btn">LOGOUT</a>';
-        //$link = '<a href="logout.php">ログアウト</a>';
-    } else {//ログインしていない時
+    } else {//ログインしていないとき
         $msg = 'You have not logged in. &emsp;<a href="login_form.php" class="btn">LOGIN</a>';
     }
     $day = $_POST['day'];
@@ -17,7 +16,7 @@
         <meta charset="UTF-8">
         <title>Calendar_Registration</title>
         <meta name="description" content="Schedule">
-        <link rel="stylesheet" href="schedule3.css">
+        <link rel="stylesheet" href="schedule.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,14 +62,8 @@
             }
 
             ?>
-            <p><a href="calender.php" style="color:#20b2aa;">Calendar</a></p>
-            
-            
+            <p><a href="calender.php" style="color:#20b2aa;">Calendar</a></p>           
         </div>
-        <form method="post" action="http://localhost:8090/register_schedules">
-        </form>
-
-
     </body>
 </html>
 <?php
