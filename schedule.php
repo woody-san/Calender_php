@@ -43,6 +43,8 @@
             $res_json = json_decode($result , true );
             curl_close($ch);
 
+            echo '<form method="post" action="schedule_delete.php">';
+
             for($i=0; $i<count($res_json) ; $i++){
                 if($res_json[$i]['reserve_id']=="xx"){               
                     echo '<table>';
@@ -60,6 +62,8 @@
                     echo '</table></br>';
                 }                
             }
+            echo '<input type="hidden" name="day" value="'.$day.'">';
+            echo '</form>';         
 
             ?>
             <p><a href="calender.php" style="color:#20b2aa;">Calendar</a></p>           
